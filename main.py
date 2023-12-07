@@ -56,3 +56,8 @@ sl.subheader("User Input")
 rm=sl.slider('RM',1,10,5)
 lstat=sl.slider('LSTAT',1,40,20)
 ptratio=sl.slider('PTRATIO',10,30,20)
+
+def userInput():
+  rm=sl.slider('RM',1,10,5)
+  lstat=sl.slider('LSTAT',1,40,20)
+  ptratio=sl.slider('PTRATIO',10,30,20)
