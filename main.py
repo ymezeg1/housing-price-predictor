@@ -53,15 +53,13 @@ def price_prediction(rm,lstat,ptratio,confidence):
 
 sl.header('Boston Housing Prices')
 sl.subheader("User Input")
-rm=sl.slider('RM',1,10,5)
-lstat=sl.slider('LSTAT',1,40,20)
-ptratio=sl.slider('PTRATIO',10,30,20)
-confidence=sl.slider('Are we confident?',options=['Yes','No']
+
 
 def userInput():
   rm=sl.slider('RM',1,10,5)
   lstat=sl.slider('LSTAT',1,40,20)
   ptratio=sl.slider('PTRATIO',10,30,20)
+  confidence=sl.slider('Are we confident?',options=['Yes','No']
   if confidence=='Yes':
     conf='True'
   else:
