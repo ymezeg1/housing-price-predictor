@@ -42,7 +42,7 @@ def estimate(rm,lstat,ptratio,confidence):
   print(interval)
   return upper,lower,logPrediction,interval
 
-def price_prediction(rm,lstat,ptratio,confidence)
+def price_prediction(rm,lstat,ptratio,confidence):
   logPrediction,upper,lower,confidence=estimate(rm,lstat,ptratio,confidence)
   pricePrediction=np.around(np.e**logPrediction/10,-3)
   priceUpper=np.around(np.e**upper/10,-3)
