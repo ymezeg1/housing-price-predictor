@@ -39,8 +39,7 @@ def estimate(rm,lstat,ptratio,confidence):
     upper=logPredict+root
     lower=logPredict-root
     interval=68
-
-  print(interval)
+    
   return upper,lower,logPrediction,interval
 
 def price_prediction(rm,lstat,ptratio,confidence):
