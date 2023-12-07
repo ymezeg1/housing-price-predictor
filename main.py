@@ -56,8 +56,21 @@ sl.subheader("User Input")
 rm=sl.slider('RM',1,10,5)
 lstat=sl.slider('LSTAT',1,40,20)
 ptratio=sl.slider('PTRATIO',10,30,20)
+confidence=sl.slider('Are we confident?',options=['Yes','No']
 
 def userInput():
   rm=sl.slider('RM',1,10,5)
   lstat=sl.slider('LSTAT',1,40,20)
   ptratio=sl.slider('PTRATIO',10,30,20)
+  if confidence=='Yes':
+    conf='True'
+  else:
+    conf='False
+  input={'rm':rm,'lstat':lstat,'ptratio':ptratio,'conf':conf}
+  inputData=pd.DataFrame(input,index=[0])
+  return inputData
+
+data=userInput()
+valuation=price_prediction(data.rm,data,lstat,data.ptratio,data.conf)
+st.subheader('Here is your valuation!')
+st.write(valuation)
