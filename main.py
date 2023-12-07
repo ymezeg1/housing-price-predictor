@@ -44,9 +44,9 @@ def estimate(rm,lstat,ptratio,confidence):
 
 def price_prediction(rm,lstat,ptratio,confidence):
   logPredict,upper,lower,confidence=estimate(rm,lstat,ptratio,confidence)
-  pricePrediction=np.around(np.e**logPredict,-1)
-  priceUpper=np.around(np.e**upper,-1)
-  priceLower=np.around(np.e**lower,-1)
+  pricePrediction=np.e**logPredict
+  priceUpper=np.e**upper
+  priceLower=np.e**lower
   final=f'Property value is {pricePrediction:.2f}. At {confidence}% the range is $' + f'{priceLower:.2f}' + ' to $' + f'{priceUpper:.2f}.'
   return final
 
