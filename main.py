@@ -59,7 +59,7 @@ def userInput():
   rm=sl.slider('RM',1,10,5)
   lstat=sl.slider('LSTAT',1,40,20)
   ptratio=sl.slider('PTRATIO',10,30,20)
-  confidence=sl.select_slider('Are we confident?',options=['Yes','No']
+  confidence=sl.select_slider('Are we confident?',options=['Yes','No'])
   if confidence=='Yes':
     conf=True
   else:
