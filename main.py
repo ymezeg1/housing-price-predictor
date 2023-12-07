@@ -60,7 +60,7 @@ def userInput():
   lstat=sl.slider('LSTAT',1,40,20)
   ptratio=sl.slider('PTRATIO',10,30,20)
   confidence=sl.slider('Are we confident?',options=['Yes','No']
-  if confidence==Yes:
+  if confidence=='Yes':
     conf='True'
   else:
     conf='False
