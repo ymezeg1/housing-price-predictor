@@ -51,8 +51,8 @@ def price_prediction(rm,lstat,ptratio,confidence):
   final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower} to ${priceUpper}.'
   return final
 
-container=sl.container(border=True)
-container.write("User Input")
-container.sl.slider('RM',1,10,5)
-container.sl.slider('LSTAT',1,40,20)
-container.sl.slider('PTRATIO',10,30,20)
+sl.header('Boston Housing Prices')
+sl.subheader("User Input")
+rm=sl.slider('RM',1,10,5)
+lstat=sl.slider('LSTAT',1,40,20)
+ptratio.sl.slider('PTRATIO',10,30,20)
