@@ -69,5 +69,5 @@ def userInput():
 
 data=userInput()
 valuation=price_prediction(data.rm,data.lstat,data.ptratio,data.conf)
-st.subheader('Here is your valuation!')
-st.write(valuation)
+sl.subheader('Here is your valuation!')
+sl.write(valuation)
