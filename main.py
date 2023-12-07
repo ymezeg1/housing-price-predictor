@@ -47,7 +47,7 @@ def price_prediction(rm,lstat,ptratio,confidence):
   pricePrediction=np.around(np.e**logPredict/10,-3)
   priceUpper=np.around(np.e**upper/10,-3)
   priceLower=np.around(np.e**lower/10,-3)
-  final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower} to ${priceUpper}.'
+  final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower}' + ' to ' + f'${priceUpper}.'
   return final
 
 sl.header('Boston Housing Prices')
