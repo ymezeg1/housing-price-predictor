@@ -31,7 +31,7 @@ def estimate(rm,lstat,ptratio,confidence):
   stats[0][ptratioi]=ptratio
 
   logPredict=r.predict(stats)[0][0]
-  if confidence.any():
+  if confidence==True:
     upper=logPredict+2*root
     lower=logPredict-2*root
     interval=95
