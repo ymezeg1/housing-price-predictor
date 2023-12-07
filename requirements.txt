@@ -12,3 +12,4 @@ statsmodels==0.14.0
 threadpoolctl==3.2.0
 tzdata==2023.3
 scikit-learn
+matplotlib
