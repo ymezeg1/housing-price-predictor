@@ -50,8 +50,4 @@ def price_prediction(rm,lstat,ptratio,confidence)
   final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower} to ${priceUpper}.'
   return final
 
-container=st.container(border=True)
-container.write("User Input")
-container.st.slider('RM',1,10,5)
-container.st.slider('LSTAT',1,40,20)
-container.st.slider('PTRATIO',10,30,20)
+st.title('Test')
