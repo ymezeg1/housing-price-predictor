@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
-
+#
 housingData=pd.read_csv('housingData.csv')
 attributes=housingData.drop(['MEDV'],axis=1)
 logValue=np.log(housingData['MEDV'])
