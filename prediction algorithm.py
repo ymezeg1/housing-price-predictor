@@ -2,6 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import warnings
+import streamlit as sl
 warnings.filterwarnings('ignore')
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
@@ -46,5 +47,11 @@ def price_prediction(rm,lstat,ptratio,confidence)
   pricePrediction=np.around(np.e**logPrediction/10,-3)
   priceUpper=np.around(np.e**upper/10,-3)
   priceLower=np.around(np.e**lower/10,-3)
-  final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower} to ${priceUpper}.
+  final=f'Property value is {pricePrediction}. At {confidence}% the range is ${priceLower} to ${priceUpper}.'
   return final
+
+container=st.container(border=True)
+container.write("User Input")
+container.st.slider('RM',1,10,5)
+container.st.slider('LSTAT',1,40,20)
+container.st.slider('PTRATIO',10,30,20)
