@@ -63,7 +63,7 @@ def userInput():
   if confidence=='Yes':
     conf=True
   else:
-    conf='False
+    conf=False
   input={'rm':rm,'lstat':lstat,'ptratio':ptratio,'conf':conf}
   inputData=pd.DataFrame(input,index=[0])
   return inputData
