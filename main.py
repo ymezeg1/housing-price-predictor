@@ -63,6 +63,6 @@ for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     sns.histplot(x=housingData[num],ec='black',color='#7A33FF')
     plt.title(num, fontsize=10)
 
-st.pyplot(bbox_inches='tight')
-st.set_option('deprecation.showPyplotGlobalUse', False)
+sl.pyplot(bbox_inches='tight')
+sl.set_option('deprecation.showPyplotGlobalUse', False)
 
