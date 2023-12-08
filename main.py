@@ -37,8 +37,6 @@ def estimate(rm,lstat,ptratio):
 def price_prediction(rm,lstat,ptratio):
   logPredict=estimate(rm,lstat,ptratio)
   pricePrediction=np.e**logPredict
-  priceUpper=np.e**upper
-  priceLower=np.e**lower
   final=f'Property value is {pricePrediction:.2f}.'
   return final
 
