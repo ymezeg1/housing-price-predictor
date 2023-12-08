@@ -32,7 +32,7 @@ def estimate(rm,lstat,ptratio):
 
   logPredict=r.predict(stats)[0][0]
     
-  return logPredict,interval
+  return logPredict
 
 def price_prediction(rm,lstat,ptratio):
   logPredict=estimate(rm,lstat,ptratio)
