@@ -65,5 +65,5 @@ for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     
 plt.tight_layout()
 sl.pyplot()
-sl.set_option('deprecation.showPyplotGlobalUse', False)
+#sl.set_option('deprecation.showPyplotGlobalUse', False)
 
