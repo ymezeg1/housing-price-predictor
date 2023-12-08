@@ -68,7 +68,7 @@ sl.pyplot()
 
 plt.figure(figsize=(14,8))
 ylog=np.log(housingData['MEDV'])
-plt.title(f'Log value w/ skew {ylog.skew()}')
 ylog.skew()
+plt.title(f'Log value w/ skew {ylog.skew()}')
 fig=sns.distplot(ylog)
 sl.pyplot(fig)
