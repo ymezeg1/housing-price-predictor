@@ -25,45 +25,31 @@ fvalues=r.predict(attributes)
 mean=mean_squared_error(logData,fvalues)
 root=np.sqrt(mean)
 
-def estimate(rm,lstat,ptratio,confidence):
+def estimate(rm,lstat,ptratio):
   stats[0][rmi]=rm
   stats[0][lstati]=lstat
   stats[0][ptratioi]=ptratio
 
   logPredict=r.predict(stats)[0][0]
-  if confidence.any():
-    upper=logPredict+2*root
-    lower=logPredict-(2*root)
-    interval=95
-  else:
-    upper=logPredict+root
-    lower=logPredict-root
-    interval=68
     
-  return upper,lower,logPredict,interval
+  return logPredict,interval
 
-def price_prediction(rm,lstat,ptratio,confidence):
-  logPredict,upper,lower,confidence=estimate(rm,lstat,ptratio,confidence)
+def price_prediction(rm,lstat,ptratio):
+  logPredict,upper,lower,confidence=estimate(rm,lstat,ptratio)
   pricePrediction=np.e**logPredict
   priceUpper=np.e**upper
   priceLower=np.e**lower
-  final=f'Property value is {pricePrediction:.2f}. At {confidence}% the range is $' + f'{priceLower:.2f}' + ' to $' + f'{priceUpper:.2f}.'
+  final=f'Property value is {pricePrediction:.2f}.'
   return final
 
 sl.header('Boston Housing Prices')
 sl.subheader("User Input")
 
-
 def userInput():
   rm=sl.slider('RM',1,10,5)
   lstat=sl.slider('LSTAT',1,40,20)
   ptratio=sl.slider('PTRATIO',10,30,20)
-  confidence=sl.select_slider('Are we confident?',options=['Yes','No'])
-  if confidence=='Yes':
-    conf=True
-  else:
-    conf=False
-  input={'rm':rm,'lstat':lstat,'ptratio':ptratio,'conf':conf}
+  input={'rm':rm,'lstat':lstat,'ptratio':ptratio}
   inputData=pd.DataFrame(input,index=[0])
   return inputData
 
