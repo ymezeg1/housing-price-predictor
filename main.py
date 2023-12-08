@@ -61,7 +61,7 @@ plt.figure(figsize=(8,16))
 for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     ax=plt.subplot(6,2,i + 1)
     sns.histplot(x=housingData[num],ec='black',color='#626262')
-    plt.title(num, fontsize=10)
+    plt.title(num.capitalize(), fontsize=16)
     
 plt.tight_layout()
 sl.pyplot()
