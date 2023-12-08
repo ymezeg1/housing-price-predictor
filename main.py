@@ -46,7 +46,7 @@ sl.subheader("User Input")
 def userInput():
   rm=sl.slider('# of rooms',1,10,5)
   lstat=sl.slider('LSTAT (Education level and % of laborers in neighborhood)',1,40,20)
-  ptratio=sl.slider('PTRATIO (Student:Teacher ratio of school district)',10,30,20)
+  ptratio=sl.slider('PTRATIO (Student/:Teacher ratio of school district)',10,30,20)
   input={'rm':rm,'lstat':lstat,'ptratio':ptratio}
   inputData=pd.DataFrame(input,index=[0])
   return inputData
