@@ -65,3 +65,9 @@ for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     
 plt.tight_layout()
 sl.pyplot()
+
+ylog=np.log(housingData['MEDV'])
+ylog.skew()
+sns.distplot(ylog)
+plt.title(f'Log value w/ skew {ylog.skew()}')
+sl.pyplot()
