@@ -64,5 +64,5 @@ for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     plt.title(num, fontsize=10)
 
 sl.pyplot(fig)
-sl.set_option('deprecation.showPyplotGlobalUse', False)
+#sl.set_option('deprecation.showPyplotGlobalUse', False)
 
