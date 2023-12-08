@@ -35,7 +35,7 @@ def estimate(rm,lstat,ptratio):
   return logPredict,interval
 
 def price_prediction(rm,lstat,ptratio):
-  logPredict,upper,lower,confidence=estimate(rm,lstat,ptratio)
+  logPredict,upper,lower=estimate(rm,lstat,ptratio)
   pricePrediction=np.e**logPredict
   priceUpper=np.e**upper
   priceLower=np.e**lower
