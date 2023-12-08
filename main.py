@@ -63,7 +63,7 @@ for i,num in enumerate(housingData.select_dtypes(exclude='O')):
     sns.histplot(x=housingData[num],ec='black',color='#7A33FF')
     plt.title(num, fontsize=10)
     
-
+plt.tight_layout()
 sl.pyplot()
 sl.set_option('deprecation.showPyplotGlobalUse', False)
 
